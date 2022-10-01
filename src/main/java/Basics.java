@@ -40,9 +40,8 @@ public class Basics {
          */
         System.out.println(7 + 5);
 
-        /* TODO (Task 1): Write a line of code below that prints the string
-         *                Hello World!
-         */
+        System.out.println("Hello World!");
+
 
 
 
@@ -58,11 +57,8 @@ public class Basics {
          *    (Relevant reading: 1.2. Variables and Types)
          */
 
-        /*
-         * TODO (Task 2): Create a variable named my_variable and assign it the
-         *                value 100.
-         */
 
+         int my_variable = 100;
 
 
         /* Do not remove the line below: if you did task 2 correctly, then
@@ -99,6 +95,10 @@ public class Basics {
          * Current count: 1
          * Current count: 0
          */
+
+         for(int i = 10; i >= 0; i--) {
+             System.out.println("Current count: " + i);
+         }
 
 
     }
@@ -142,7 +142,10 @@ public class Basics {
          */
         StringBuilder ret = new StringBuilder();
 
-        // Fill in the rest of the body here
+        String[] x = to_split.split(" ");
+        for(int i = 0; i < x.length; i++){
+            ret.append(x[i].charAt(0));
+        }
 
         return ret.toString();
     }
@@ -171,6 +174,9 @@ public class Basics {
          *                (e.g. arr[i] gives you the item at index i).
          */
 
+         for(int i = 1; i < arr.length; i = i + 2) {
+             current_sum = current_sum + arr[i];
+         }
         return current_sum;
     }
 
